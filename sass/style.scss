@@ -1,0 +1,15 @@
+// global
+@import "./global/fonts";
+@import "./global/variables";
+@import "./global/scaffolding";
+@import "./global/mixins";
+@import "./global/common";
+
+//components
+@import "./blocks/confid";
+@import "./blocks/ms-form";
+
+//blocks
+@import "./blocks/visit";
+@import "./blocks/brands";
+@import "./blocks/utp";

@@ -1,0 +1,29 @@
+//display widths
+$max-mobile-width: "(max-width: 991px)";
+$max-mobile-wrapper: 750px;
+
+$min-tablet-width: "(min-width: 992px)";
+$max-tablet-width: "(max-width: 1199px)";
+$max-tablet-wrapper: 970px;
+
+$min-desktop-width: "(min-width: 1200px)";
+$max-desktop-wrapper: 1170px;
+
+//blocks
+$padding--mobile: 15px;
+$padding--tablet: 15px;
+$padding--desktop: 15px;
+
+//text
+$color--main: #000000;
+$color--alt: #74BE0F;
+
+$font--main: "Montserrat", Arial, serif;
+$font--title: "Montserrat", Arial, serif;
+
+//inputs buttons
+$border-main: #1A1C00;
+//backgrounds
+$bg--main: #ffffff;
+
+$box-shadow: 0 3px 21px 0 rgba(176, 173, 168, .4);

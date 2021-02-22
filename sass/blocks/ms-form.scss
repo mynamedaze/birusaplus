@@ -1,0 +1,47 @@
+.ms-form {
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, .2);
+  font-family: $font--main;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  @media #{$max-mobile-width} {
+    padding: 6px;
+  }
+  @media #{$min-tablet-width} {
+    padding: 7px;
+  }
+  @media #{$min-desktop-width} {
+    padding: 10px;
+  }
+  .ms-form__container {
+    border: 1px solid rgba(171, 171, 171, .3);
+    @media #{$min-tablet-width} {
+      padding: 20px 45px 10px 45px;
+    }
+  }
+  .ms-form__title {
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+  }
+  .ms-form__description {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    @media #{$min-tablet-width} {
+      font-size: 14px;
+    }
+    @media #{$min-desktop-width} {
+      font-size: 20px;
+    }
+  }
+  .ms-form__inputs-container {
+    background-color: red;
+    @media #{$min-tablet-width} {
+      display: flex;
+      width: 800px;
+      @include centers;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.common-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font--title;
+  font-weight: 700;
+  font-size: 36px;
+  display: block;
+  span {
+    font-weight: 400;
+    color: #373E9F;
+  }
+}
+.common-input {
+  height: 50px !important;
+  border-top: 0 solid transparent !important;
+  border-left: 0 solid transparent !important;
+  border-right: 0 solid transparent !important;
+  border-bottom: 2px solid $border-main !important;
+  background-color: transparent !important;
+  box-shadow: inset 0 1px 2px transparent !important;
+}
+.common-input::-webkit-input-placeholder {color: $border-main;}
+.common-input::-moz-placeholder          {color: $border-main;}/* Firefox 19+ */
+.common-input:-moz-placeholder           {color: $border-main;}/* Firefox 18- */
+.common-input:-ms-input-placeholder      {color: $border-main;}
+.common-button {
+  border-radius: 5px;
+  background-color: transparent;
+  height: 60px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  border: 0 solid transparent;
+  span {
+    position: relative;
+    z-index: 3;
+  }
+  &::before {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+  &::after {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid $border-main;
+  }
+  &:hover {
+    &:before {
+      transition: transform 0.5s ease 0.2s;
+      background-color: #74BE0F;
+      transform: translate(7px, 7px);
+    }
+  }
+}
+.strong {
+  font-weight: 700;
+}

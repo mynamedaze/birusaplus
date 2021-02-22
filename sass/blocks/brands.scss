@@ -1,0 +1,113 @@
+.brands {
+  background-size: auto auto;
+  background-position: 0 0;
+  background-image: url("/assets/images/partners-pattern-bg.jpg");
+  .brands__wrapper {
+    @include paddings;
+    @include centers;
+    @include section-width;
+    position: relative;
+    @media #{$max-mobile-width} {
+      padding-top: 30px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 28px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 40px;
+    }
+    &::after {
+      @media #{$min-tablet-width} {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        width: 516px;
+        height: 284px;
+        transform: translate(-50%, -50%);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url("/assets/images/brands-blue-bg.png");
+      }
+      @media #{$min-desktop-width} {
+        width: 737px;
+        height: 406px;
+      }
+    }
+  }
+  .brands__title {
+    text-align: center;
+  }
+  .brands__list {
+    padding-left: 0;
+    list-style: none;
+  }
+  .brands__item {
+    font-size: 0;
+    padding: 5px;
+  }
+  .brands__brand {
+    height: 120px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+    @media #{$min-tablet-width} {
+      margin-bottom: 14px;
+    }
+    @media #{$min-desktop-width} {
+      margin-bottom: 20px;
+    }
+  }
+  .brands__brand--indesit {
+    background-image: url("/assets/images/brand-indesit.jpg");
+  }
+  .brands__brand--stinol {
+    background-image: url("/assets/images/brand-stinol.jpg");
+  }
+  .brands__brand--beko {
+    background-image: url("/assets/images/brand-beko.jpg");
+  }
+  .brands__brand--ariston {
+    background-image: url("/assets/images/brand-ariston.jpg");
+  }
+  .brands__brand--kaiser {
+    background-image: url("/assets/images/brand-kaiser.jpg");
+  }
+  .brands__brand--siemens {
+    background-image: url("/assets/images/brand-siemens.jpg");
+  }
+  .brands__brand--daewoo {
+    background-image: url("/assets/images/brand-daewoo.jpg");
+  }
+  .brands__brand--whirlpool {
+    background-image: url("/assets/images/brand-whirlpool.jpg");
+  }
+  .brands__brand--aeg {
+    background-image: url("/assets/images/brand-aeg.jpg");
+  }
+  .brands__brand--birusa {
+    background-image: url("/assets/images/brand-birusa.jpg");
+  }
+  .brands__brand--ardo {
+    background-image: url("/assets/images/brand-ardo.jpg");
+  }
+  .brands__brand--atlant {
+    background-image: url("/assets/images/brand-atlant.jpg");
+  }
+  .brands__brand--lg {
+    background-image: url("/assets/images/brand-lg.jpg");
+  }
+  .brands__brand--bosch {
+    background-image: url("/assets/images/brand-bosch.jpg");
+  }
+  .brands__brand--electrolux {
+    background-image: url("/assets/images/brand-electrolux.jpg");
+  }
+}
