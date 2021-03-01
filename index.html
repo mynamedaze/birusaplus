@@ -34,69 +34,73 @@
       <p class="visit__paragraph">В большинстве случаев мы производим ремонт на месте в день обращения. Процесс может затянуться только в случае сложного ремонта или при отсутствии необходимой (редкой) запчасти у мастера. Но даже в этом случае вы платите фиксированную стоимость, независимо от количества выездов специалиста.</p>
     </div>
   </section>
-  <section class="brands">
+  <section class="brands  d-section">
     <div class="brands__wrapper">
       <h3 class="brands__title  common-title">Холодильники, <span>которые мы ремонтируем</span></h3>
       <ul class="brands__list  owl-carousel owl-theme">
         <li class="brands__item">
           <div class="brands__item-container">
-            <div class="brands__brand  brands__brand--indesit" data-brand="indesit">indesit</div>
-            <div class="brands__brand  brands__brand--stinol" data-brand="stinol">stinol</div>
-            <div class="brands__brand  brands__brand--beko" data-brand="beko">beko</div>
+            <div class="brands__brand  brands__brand--indesit" data-brand="Indesit">indesit</div>
+            <div class="brands__brand  brands__brand--stinol" data-brand="Stinol">stinol</div>
+            <div class="brands__brand  brands__brand--beko" data-brand="Beko">beko</div>
           </div>
         </li>
         <li class="brands__item">
           <div class="brands__item-container">
-            <div class="brands__brand  brands__brand--ariston" data-brand="ariston">ariston</div>
-            <div class="brands__brand  brands__brand--kaiser" data-brand="kaiser">kaiser</div>
-            <div class="brands__brand  brands__brand--siemens" data-brand="siemens">siemens</div>
+            <div class="brands__brand  brands__brand--ariston" data-brand="Ariston">ariston</div>
+            <div class="brands__brand  brands__brand--kaiser" data-brand="Kaiser">kaiser</div>
+            <div class="brands__brand  brands__brand--siemens" data-brand="Siemens">siemens</div>
           </div>
         </li>
         <li class="brands__item">
           <div class="brands__item-container">
-            <div class="brands__brand  brands__brand--daewoo" data-brand="daewoo">daewoo</div>
-            <div class="brands__brand  brands__brand--whirlpool" data-brand="whirlpool">whirlpool</div>
-            <div class="brands__brand  brands__brand--aeg" data-brand="aeg">aeg</div>
+            <div class="brands__brand  brands__brand--daewoo" data-brand="Daewoo">daewoo</div>
+            <div class="brands__brand  brands__brand--whirlpool" data-brand="Whirlpool">whirlpool</div>
+            <div class="brands__brand  brands__brand--aeg" data-brand="AEG">aeg</div>
           </div>
         </li>
         <li class="brands__item">
           <div class="brands__item-container">
-            <div class="brands__brand  brands__brand--birusa" data-brand="бирюса">бирюса</div>
-            <div class="brands__brand  brands__brand--ardo" data-brand="ardo">ardo</div>
-            <div class="brands__brand  brands__brand--atlant" data-brand="atlant">atlant</div>
+            <div class="brands__brand  brands__brand--birusa" data-brand="Бирюса">бирюса</div>
+            <div class="brands__brand  brands__brand--ardo" data-brand="Ardo">ardo</div>
+            <div class="brands__brand  brands__brand--atlant" data-brand="Atlant">atlant</div>
           </div>
         </li>
         <li class="brands__item">
           <div class="brands__item-container">
-            <div class="brands__brand  brands__brand--lg" data-brand="lg">lg</div>
-            <div class="brands__brand  brands__brand--bosch" data-brand="bosch">bosch</div>
-            <div class="brands__brand  brands__brand--electrolux" data-brand="electrolux">electrolux</div>
+            <div class="brands__brand  brands__brand--lg" data-brand="LG">lg</div>
+            <div class="brands__brand  brands__brand--bosch" data-brand="Bosch">bosch</div>
+            <div class="brands__brand  brands__brand--electrolux" data-brand="Electrolux">electrolux</div>
           </div>
         </li>
       </ul>
-      <form action="#" method="post" class="ms-form">
+      <form action="/assets/mail/mail.php" method="post" class="ms-form" id="brand-form-id">
         <div class="ms-form__container">
           <span class="ms-form__title">Вашей фирмы нет в списке?</span>
           <span class="ms-form__description">Ремонтируем все виды холодильников, как отечественных, так и зарубежных производителей. Наверняка сможем помочь и вам. Оставьте заявку!</span>
           <div class="ms-form__inputs-container">
+            <input type="hidden" class="ms-form__title" name="d-title" value="Холодильники: Фирмы нет в списке">
             <div class="ms-form__input-container">
               <label for="brand-form-input-name" class="ms-form__label">Имя</label>
-              <input type="text" class="ms-form__input" id="brand-form-input-name">
+              <input type="text" class="ms-form__input" name="d-name" id="brand-form-input-name" placeholder="Ваше имя">
             </div>
-            <div class="ms-form__input-container">
+            <div class="ms-form__input-container  ms-form__input-container--tel">
               <label for="brand-form-input-tel" class="ms-form__label">Телефон</label>
-              <input type="tel" class="ms-form__input" id="brand-form-input-tel">
+              <input type="tel" class="ms-form__input" name="d-tel" id="brand-form-input-tel" required placeholder="Ваш телефон">
             </div>
-            <div class="ms-form__input-container">
+            <div class="ms-form__input-container  ms-form__input-container--submit">
               <button class="ms-form__submit">Узнать</button>
             </div>
           </div>
-          <span class="ms-form__confid">Я соглашаюсь на обработку моих <a href="#" class="ms-form__confid-link">персональных данных</a></span>
+          <div class="confid">
+            <input type="checkbox" class="confid__checkbox" id="brand-confid-checkbox" checked required>
+            <label class="confid__label" for="brand-confid-checkbox">Я соглашаюсь на обработку моих <a href="#" class="confid__link">персональных данных</a></label>
+          </div>
         </div>
       </form>
     </div>
   </section>
-  <section class="utp">
+  <section class="utp  d-section">
     <div class="utp__wrapper">
       <ul class="utp__list">
         <li>
@@ -108,7 +112,7 @@
         </li>
         <li>
           <div class="container">
-            <h3>Запчасти на ваш выбор</h3>
+            <h3>Запчасти <br>на ваш выбор</h3>
             <p>Обычно мы ставим оригинальные запчасти, которые получаем напрямую от производителей.</p>
             <p>Но можем предложить и качественные аналоги. Этой возможностью часто пользуются при ремонте холодильников на съемных квартирах.</p>
           </div>
@@ -122,8 +126,57 @@
       </ul>
     </div>
   </section>
+  <section class="entity  d-section">
+    <div class="entity__wrapper">
+      <h3 class="common-title">Также работаем с <span>юридическими лицами</span></h3>
+      <ul>
+        <li>Принимаем <br><span>безналичную оплату</span> <br>на расчетный счет</li>
+        <li>Ремонтируем <span>торговое и промышленное</span> холодильное оборудование</li>
+      </ul>
+      <form action="/assets/mail/mail.php" method="post" class="ms-form" id="entity-form-id">
+        <div class="ms-form__container">
+          <span class="ms-form__title">Остались вопросы?</span>
+          <span class="ms-form__description">Оставьте контактные данные, мы Вам перезвоним!</span>
+          <div class="ms-form__inputs-container">
+            <input type="hidden" class="ms-form__title" name="d-title" value="Холодильники: Остались вопросы">
+            <div class="ms-form__input-container">
+              <label for="entity-form-input-name" class="ms-form__label">Имя</label>
+              <input type="text" class="ms-form__input" name="d-name" id="entity-form-input-name" placeholder="Ваше имя">
+            </div>
+            <div class="ms-form__input-container  ms-form__input-container--tel">
+              <label for="entity-form-input-tel" class="ms-form__label">Телефон</label>
+              <input type="tel" class="ms-form__input" name="d-tel" id="entity-form-input-tel" required placeholder="Ваш телефон">
+            </div>
+            <div class="ms-form__input-container  ms-form__input-container--submit">
+              <button class="ms-form__submit">Узнать</button>
+            </div>
+          </div>
+          <div class="confid">
+            <input type="checkbox" class="confid__checkbox" id="entity-confid-checkbox" checked required>
+            <label class="confid__label" for="entity-confid-checkbox">Я соглашаюсь на обработку моих <a href="#" class="confid__link">персональных данных</a></label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <div class="popup-brand popup d-section">
+    <button class="popup-brand__close-btn  close-btn">закрыть</button>
+    <span class="popup-brand__description">Узнать стоимость ремонта холодильника <span id="popup-brand-brand"></span></span>
+    <form action="/assets/mail/mail-brand.php" id="popup-brand-form-id" class="popup-brand__form" method="post">
+      <input type="hidden" class="ms-form__title" name="d-title" value="Холодильники: Попап. Узнать стоимость ремонта">
+      <input type="text" class="popup-brand__input" id="popup-brand-name" name="d-name" placeholder="Ваше имя">
+      <input type="tel" class="popup-brand__input" id="popup-brand-tel" name="d-tel" required placeholder="Ваш телефон">
+      <input type="hidden" class="popup-brand__input" name="d-brand" id="popup-brand-input-brand">
+      <button class="popup-brand__submit">Отправить</button>
+    </form>
+  </div>
+  <div class="d-overlay"></div>
+  <div class="popup-success">
+    <span class="popup-success__description">Ваша заявка успешно отправлена. В ближайшее время мы вам перезвоним!</span>
+  </div>
 </main>
 <script src="/assets/js/jquery-3.5.1.min.js"></script>
+<script src="/assets/js/jquery.inputmask.bundle.js"></script>
 <script src="/assets/js/owl.carousel.min.js"></script>
 <script src="/assets/js/main.js"></script>
 </body>

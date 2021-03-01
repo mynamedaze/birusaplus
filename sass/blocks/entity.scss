@@ -1,0 +1,107 @@
+.entity {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @media #{$max-mobile-width} {
+    background-image: url("/assets/images/entity_bg-mobile.jpg");
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-image: url("/assets/images/entity_bg.jpg");
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+  .entity__wrapper {
+    @include centers;
+    @include paddings;
+    @include section-width;
+  }
+  h3 {
+    text-align: center;
+  }
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    @media #{$max-mobile-width} {
+      margin-bottom: 20px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 75px;
+      width: 800px;
+      @include centers;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+    @media #{$min-desktop-width} {
+      margin-bottom: 40px;
+    }
+    li {
+      font-size: 20px;
+      text-align: center;
+      background-repeat: no-repeat;
+      @media #{$min-tablet-width} {
+        width: 50%;
+      }
+      &:nth-child(1) {
+        background-size: 124px 101px;
+        background-image: url('/assets/images/entity-1.png');
+        @media #{$max-mobile-width} {
+          padding-top: 105px;
+          background-position: 55% 0;
+        }
+        @media #{$min-tablet-width} {
+          padding-top: 105px;
+          background-position: 55% 0;
+        }
+      }
+      &:nth-child(2) {
+        background-size: 148px 92px;
+        background-image: url('/assets/images/entity-2.png');
+        @media #{$max-mobile-width} {
+          padding-top: 145px;
+          background-position: 55% 50px;
+        }
+        @media #{$min-tablet-width} {
+          padding-top: 105px;
+          background-position: 55% 0;
+        }
+      }
+      &.stir {
+        background-size: 113px 88px;
+        background-image: url('/assets/images/entity-2--holod.png');
+        @media #{$max-mobile-width} {
+          padding-top: 145px;
+          background-position: 55% 50px;
+        }
+        @media #{$min-tablet-width} {
+          padding-top: 105px;
+          background-position: 55% 10px;
+        }
+      }
+      span {
+        position: relative;
+        display: inline-block;
+        z-index: 100;
+        font-weight: 700;
+        &::after {
+          content: "";
+          height: 7px;
+          display: block;
+          background-color: #fed12d;
+          position: absolute;
+          bottom: 1px;
+          z-index: -1;
+          width: 100%;
+          left: -1px;
+        }
+      }
+    }
+  }
+}

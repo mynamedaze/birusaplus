@@ -1,4 +1,27 @@
 .utp {
+  @media #{$max-mobile-width} {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    background-image: url("/assets/images/utp_bg-desktop.jpg");
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &.utp--stir {
+    @media #{$min-tablet-width} {
+      background-image: url("/assets/images/utp_bg-desktop--stir.jpg");
+      background-position: right center;
+      background-size: auto 70%;
+    }
+  }
   .utp__wrapper {
     @include section-width;
     @include paddings;
@@ -8,6 +31,8 @@
     padding-left: 0;
     list-style: none;
     font-family: $font--main;
+    margin-top: 0;
+    margin-bottom: 0;
     @media #{$min-tablet-width} {
       display: flex;
       flex-wrap: wrap;
@@ -16,10 +41,18 @@
       justify-content: space-between;
     }
     li {
+      &:last-child {
+        @media #{$min-tablet-width} {
+          width: 100%;
+        }
+      }
+      background-color: #fff;
       box-sizing: border-box;
       box-shadow: 0 2px 7px 0 rgba(0, 0, 0, .2);
       position: relative;
       display: flex;
+      background-repeat: no-repeat;
+      color: #615F5F;
       @media #{$max-mobile-width} {
         padding: 9px;
         margin-top: 15px;
@@ -38,7 +71,117 @@
         }
         .container {
           @media #{$min-tablet-width} {
-            padding: 353px 20px 20px 40px;
+            padding: 302px 20px 20px 40px;
+          }
+        }
+      }
+      &:nth-child(1) {
+        @media #{$max-mobile-width} {
+          background-size: 224px 206px;
+          background-position: center 30px;
+          background-image: url("/assets/images/utp_1-mobile.jpg");
+        }
+        @media #{$min-tablet-width} {
+          background-size: 320px 294px;
+          background-position: center 20px;
+          background-image: url("/assets/images/utp_1.jpg");
+        }
+        &::after {
+          @media #{$max-mobile-width} {
+            top: 270px;
+          }
+        }
+        .container {
+          @media #{$max-mobile-width} {
+            padding: 245px 25px 25px 25px;
+          }
+        }
+      }
+      &.utp-stir-1 {
+        @media #{$max-mobile-width} {
+          background-size: 185px 208px;
+          background-position: center 30px;
+          background-image: url("/assets/images/utp_1-mobile--stir.jpg");
+        }
+        @media #{$min-tablet-width} {
+          background-size: 264px 297px;
+          background-position: center 20px;
+          background-image: url("/assets/images/utp_1--stir.jpg");
+        }
+        &::after {
+          @media #{$max-mobile-width} {
+            top: 270px;
+          }
+        }
+        .container {
+          @media #{$max-mobile-width} {
+            padding: 245px 25px 25px 25px;
+          }
+        }
+      }
+      &:nth-child(2) {
+        @media #{$max-mobile-width} {
+          background-size: 224px 169px;
+          background-position: center 40px;
+          background-image: url("/assets/images/utp_2-mobile.jpg");
+        }
+        @media #{$min-tablet-width} {
+          background-size: 320px 242px;
+          background-position: center 55px;
+          background-image: url("/assets/images/utp_2.jpg");
+        }
+        &::after {
+          @media #{$max-mobile-width} {
+            top: 240px;
+          }
+        }
+        .container {
+          @media #{$max-mobile-width} {
+            padding: 215px 25px 25px 25px;
+          }
+        }
+      }
+      &.utp-stir-2 {
+        @media #{$max-mobile-width} {
+          background-size: 224px 169px;
+          background-position: center 40px;
+          background-image: url("/assets/images/utp_2-mobile--stir.jpg");
+        }
+        @media #{$min-tablet-width} {
+          background-size: 320px 242px;
+          background-position: center 40px;
+          background-image: url("/assets/images/utp_2--stir.jpg");
+        }
+        &::after {
+          @media #{$max-mobile-width} {
+            top: 270px;
+          }
+        }
+        .container {
+          @media #{$max-mobile-width} {
+            padding: 245px 25px 25px 25px;
+          }
+        }
+      }
+      &:nth-child(3) {
+        @media #{$max-mobile-width} {
+          background-size: 213px 150px;
+          background-position: center 20px;
+          background-image: url("/assets/images/utp_3-mobile.jpg");
+        }
+        @media #{$min-tablet-width} {
+          background-size: 304px 211px;
+          background-position: 30px center;
+          background-image: url("/assets/images/utp_3.jpg");
+        }
+        &::after {
+          @media #{$max-mobile-width} {
+            top: 185px;
+          }
+        }
+        .container {
+          @media #{$max-mobile-width} {
+            padding: 160px 25px 25px 25px;
           }
         }
       }
@@ -51,6 +194,20 @@
             padding: 20px 20px 20px 389px;
           }
         }
+        h3 {
+          @media #{$min-tablet-width} {
+            text-align: left;
+          }
+        }
+        &::after {
+          @media #{$min-tablet-width} {
+            width: 2px;
+            height: 150px;
+            top: 50%;
+            left: 360px;
+            transform: translateY(-50%);
+          }
+        }
       }
       &::after {
         position: absolute;
@@ -58,18 +215,22 @@
         width: 173px;
         height: 2px;
         background-color: #F0A41A;
-        top: 250px;
         left: 50%;
         transform: translateX(-50%);
+        @media #{$min-tablet-width} {
+          top: 320px;
+        }
+        @media #{$min-desktop-width} {
+          top: 335px;
+        }
       }
       .container {
         border: 1px solid rgba(171, 171, 171, .4);
-        @media #{$max-mobile-width} {
-          padding: 240px 25px 25px 25px;
-        }
       }
       h3 {
         text-align: center;
+        color: #000;
+        margin-bottom: 0;
         @media #{$max-mobile-width} {
           font-size: 24px;
         }

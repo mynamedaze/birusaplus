@@ -35,6 +35,21 @@
         right: -210px;
       }
     }
+    &.visit__wrapper--stir::after {
+      @media #{$min-tablet-width} {
+        position: absolute;
+        content: "";
+        right: -147px;
+        top: 50%;
+        width: 493px;
+        height: 94%;
+        transform: translateY(-47%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url("/assets/images/visit_bg--stir.png");
+      }
+    }
   }
   .visit__title {
     text-align: center;
@@ -151,6 +166,11 @@
         width: 51.6px;
         height: 62px;
         background-image: url("/assets/images/visit_item-3.svg");
+      }
+      &.visit__item--holod::before {
+        width: 67px;
+        height: 64px;
+        background-image: url("/assets/images/visit_item-6.svg");
       }
     }
     &:nth-child(4) {

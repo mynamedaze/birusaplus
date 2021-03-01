@@ -15,6 +15,9 @@
   }
   .ms-form__container {
     border: 1px solid rgba(171, 171, 171, .3);
+    @media #{$max-mobile-width} {
+      padding: 45px 20px 45px 20px;
+    }
     @media #{$min-tablet-width} {
       padding: 20px 45px 10px 45px;
     }
@@ -37,11 +40,85 @@
     }
   }
   .ms-form__inputs-container {
-    background-color: red;
+    @media #{$max-mobile-width} {
+      max-width: 250px;
+      @include centers;
+      margin-bottom: 33px;
+    }
     @media #{$min-tablet-width} {
+      padding-top: 40px;
       display: flex;
+      justify-content: space-between;
       width: 800px;
       @include centers;
+      margin-bottom: 20px;
+    }
+  }
+  .ms-form__input-container {
+    position: relative;
+    @media #{$max-mobile-width} {
+      margin-top: 43px;
+    }
+    @media #{$min-tablet-width} {
+      flex-grow: 1;
+    }
+  }
+  .ms-form__input-container--tel {
+    @media #{$min-tablet-width} {
+      margin-left: 28px;
+    }
+    @media #{$min-desktop-width} {
+      margin-left: 40px;
+    }
+  }
+  .ms-form__label {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    color: #939292;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .ms-form__input {
+    border: 1px solid rgba(171, 171, 171, .8);
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .ms-form__input-container--submit {
+    @media #{$max-mobile-width} {
+      width: 220px;
+      @include centers;
+      margin-top: 26px;
+    }
+    @media #{$min-tablet-width} {
+      width: 220px;
+      margin-left: 28px;
+      flex-grow: 0;
+    }
+    @media #{$min-desktop-width} {
+      margin-left: 40px;
+    }
+  }
+  .ms-form__submit {
+    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 50px;
+    height: 50px;
+    background: #f0a41a;
+    background: -moz-linear-gradient(top,  #f0a41a 0%, #e7840f 100%);
+    background: -webkit-linear-gradient(top,  #f0a41a 0%,#e7840f 100%);
+    background: linear-gradient(to bottom,  #f0a41a 0%,#e7840f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0a41a', endColorstr='#e7840f',GradientType=0 );
+    box-shadow: 0 1px 5px 0 #CE7709;
+    border: 0 solid transparent;
+    &:hover {
+      background: rgb(231,132,15);
     }
   }
 }

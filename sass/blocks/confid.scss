@@ -1,21 +1,45 @@
-.confid__checkbox {
-  display: none !important;
-}
-.confid__label {
-  position: relative;
-  padding-left: 30px;
-  margin-top: 30px;
-  display: block;
-  @media #{$max-mobile-width} {
-    line-height: 21px;
+.confid {
+  @media #{$min-tablet-width} {
+    text-align: center;
   }
-  &::before {
+  .confid__checkbox {
+    display: none;
+  }
+  .confid__label {
+    position: relative;
+    padding-left: 30px;
+    display: inline-block;
+    @media #{$max-mobile-width} {
+      line-height: 21px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      border: 2px solid $border-main;
+    }
+  }
+  a {
+    color: #F0A41A;
+  }
+}
+#brand-confid-checkbox:checked ~ .confid__label,
+#entity-confid-checkbox:checked ~ .confid__label {
+  &::after {
     position: absolute;
     content: "";
     left: 0;
-    top: 0;
-    width: 18px;
-    height: 18px;
-    border: 2px solid $border-main;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    background-image: url("/assets/images/confid-check.svg");
   }
 }

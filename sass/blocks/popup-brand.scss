@@ -1,0 +1,52 @@
+.popup-brand {
+  display: none;
+  box-sizing: border-box;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  padding: 40px 20px 30px 20px;
+  background-color: #fff;
+  z-index: 1000;
+  .popup-brand__close-btn {
+    right: 5px;
+    top: 5px;
+  }
+  .popup-brand__description {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+  }
+  .popup-brand__input {
+    display: block;
+    border: 1px solid rgba(171, 171, 171, .8);
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+  }
+  .popup-brand__submit {
+    display: block;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 50px;
+    height: 50px;
+    background: #f0a41a;
+    background: -moz-linear-gradient(top,  #f0a41a 0%, #e7840f 100%);
+    background: -webkit-linear-gradient(top,  #f0a41a 0%,#e7840f 100%);
+    background: linear-gradient(to bottom,  #f0a41a 0%,#e7840f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0a41a', endColorstr='#e7840f',GradientType=0 );
+    box-shadow: 0 1px 5px 0 #CE7709;
+    border: 0 solid transparent;
+    &:hover {
+      background: rgb(231,132,15);
+    }
+  }
+}

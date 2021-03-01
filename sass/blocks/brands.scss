@@ -2,6 +2,9 @@
   background-size: auto auto;
   background-position: 0 0;
   background-image: url("/assets/images/partners-pattern-bg.jpg");
+  &.brands--stir {
+    background-image: url("/assets/images/partners-pattern-bg--stir.jpg");
+  }
   .brands__wrapper {
     @include paddings;
     @include centers;
@@ -9,12 +12,15 @@
     position: relative;
     @media #{$max-mobile-width} {
       padding-top: 30px;
+      padding-bottom: 20px;
     }
     @media #{$min-tablet-width} {
       padding-top: 28px;
+      padding-bottom: 28px;
     }
     @media #{$min-desktop-width} {
       padding-top: 40px;
+      padding-bottom: 40px;
     }
     &::after {
       @media #{$min-tablet-width} {
@@ -46,6 +52,9 @@
   .brands__item {
     font-size: 0;
     padding: 5px;
+  }
+  .active:after {
+    background-color: transparent !important;
   }
   .brands__brand {
     height: 120px;
@@ -109,5 +118,11 @@
   }
   .brands__brand--electrolux {
     background-image: url("/assets/images/brand-electrolux.jpg");
+  }
+  .brands__brand--samsung {
+    background-image: url("/assets/images/brand-samsung.jpg");
+  }
+  .brands__brand--candy {
+    background-image: url("/assets/images/brand-candy.jpg");
   }
 }
